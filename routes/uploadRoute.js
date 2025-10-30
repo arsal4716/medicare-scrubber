@@ -129,10 +129,18 @@ router.post("/", upload.single("file"), async (req, res) => {
     const stats = {
       total: mergedResults.length,
       databaseDuplicates: mergedResults.filter((r) => r.status.includes("Database")).length,
+      apiDuplicates: mergedResults.filter((r) => r.status.includes("API)")).length,
       nonDuplicates: mergedResults.filter((r) => r.status === "Not Duplicate").length,
       errors: mergedResults.filter((r) => r.status.includes("Error")).length,
       duplicates: 0 
     };
+    stats.duplicates = stats.databaseDuplicates + stats.apiDuplicates;
+    console.log(`Processing complete. Results:`);
+    console.log(`- Total numbers processed: ${stats.total}`);
+    console.log(`- Database duplicates found: ${stats.databaseDuplicates}`);
+    console.log(`- API duplicates found: ${stats.apiDuplicates}`);
+    console.log(`- Valid numbers: ${stats.nonDuplicates}`);
+    console.log(`- Errors: ${stats.errors}`);
     console.timeEnd("Total processing time");
 
     res.json({
