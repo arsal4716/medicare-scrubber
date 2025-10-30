@@ -105,35 +105,8 @@ const FileUpload = () => {
         style={{ maxWidth: "700px", width: "100%" }}
       >
         <Card.Body>
-          <p className="link-color">
-            <a
-              href="http://91.108.112.198:3000/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              ACA-Xfers-CPL File Here
-            </a>
-          </p>
-          <p className="link-color">
-            <a
-              href="http://91.108.112.198:3001/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Scrub ACA-Xfers-REVShare File Here
-            </a>
-          </p>
-          <p className="link-color">
-            <a
-              href="http://91.108.112.198:3004/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              ACA-Xfers-CPA File
-            </a>
-          </p>
-          <h4 className="mb-3 fw-bold text-primary">ACA-Xfers-CPL-Scrub</h4>
-          <h4>Version Date: May-31-2025</h4>
+          <h4 className="mb-3 fw-bold text-primary">Medicare Scurbber</h4>
+          <h4>Version Date: OCT-30-2025</h4>
           <p className="text-muted mb-4">
             Upload phone numbers (.xlsx, .csv, .xls)
             <br />
